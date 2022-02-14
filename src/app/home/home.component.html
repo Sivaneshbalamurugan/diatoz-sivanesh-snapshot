@@ -1,0 +1,50 @@
+
+
+
+
+
+   <head>
+      <title>HTML img Tag</title>
+      <style>
+        .marginauto {
+            margin: 10px auto 20px;
+            display: block;
+        }
+        </style>
+   </head>
+   <body>
+    <div class="form-group">
+       
+    </div>
+     
+    <h1>Welcome to Snapshot</h1>
+    <div class="box">
+    <div class="container-1">
+      <div class="center">
+            
+        <input type="text" placeholder="Search.." #tag >
+        <br><br><br>
+        <button type="button" (click)="search(tag.value);" class="btn btn-primary ml-2">Search</button>
+      
+       
+        
+      </div>
+    </div>
+    <div class="container-1">
+     <br> <br>
+     <br> <br>
+     <button type="button"  class="btn btn-primary ml-2" (click)="search('mountain');">Mountain</button>
+     <button type="button"  class="btn btn-primary ml-2" (click)="search('boy');">boy</button>
+     <button type="button"  class="btn btn-primary ml-2" (click)="search('beach');">Beach</button>
+     <button type="button"  class="btn btn-primary ml-2" (click)="search('etc');">etc</button>
+     <div class="row col-md-12 mt-5">
+      <div class="col-md-3 mb-1 ml-1" *ngFor="let photos of apiData">
+        <img src="https://farm{{photos.farm}}.staticflickr.com/{{photos.server}}/{{photos.id}}_{{photos.secret}}_m.jpg%60;">
+      </div>
+     </div>
+    </div>
+    </div>
+   
+   
+   </body>
+
